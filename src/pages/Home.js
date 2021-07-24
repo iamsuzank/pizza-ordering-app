@@ -1,6 +1,5 @@
 import React from "react";
 import Products from "../components/Products";
-import Slider from "./ImageSlider";
 
 import "./slider.css";
 import ImageSlider from "./ImageSlider";

@@ -2,11 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../CartContext";
+import { useState } from "react";
+import { MdDoneAll } from "react-icons/md";
 
-const Food = ({ title, price, image, type, id }) => {
+const Food = (props) => {
+  // props.selected = false;
+  const { name, price, image, size, _id } = props;
   const { cart, setCart } = useContext(CartContext);
+  const [isAdding, setIsAdding] = useState(false);
+  const [selected, setSelected] = useState(false);
 
-  const addToCart = (e, id, title, image, price) => {
+  const addToCart = (e, id) => {
     e.preventDefault();
     let _cart = { ...cart };
 
@@ -24,16 +30,22 @@ const Food = ({ title, price, image, type, id }) => {
     }
     _cart.totalItems += 1;
     setCart(_cart);
+    setIsAdding(true);
+    setSelected(true);
+    setTimeout(() => {
+      setIsAdding(false);
+    }, 1000);
   };
   return (
-    <Link to={`/products/${id}`}>
+    <Link to={`/products/${_id}`}>
       <div>
-        <img src={image} alt={title} />
+        <img src={image} alt={name} />
 
         <div className="text-center">
-          <h2 className="text-lg font-bold py-2">{title}</h2>
+          <h2 className="text-lg font-bold py-2">{name}</h2>
+
           <span className="bg-pink-200 py-1 rounded-full text-sm px-4">
-            {type}
+            {size}
           </span>
         </div>
 
@@ -46,10 +58,18 @@ const Food = ({ title, price, image, type, id }) => {
             रु {price}
           </span>
           <button
-            onClick={(e) => addToCart(e, id, title, image, price)}
-            className="bg-yellow-500 py-1 px-4 rounded-full font-bold"
+            disabled={isAdding}
+            onClick={(e) => addToCart(e, _id)}
+            className={`${
+              isAdding
+                ? "bg-green-500 py-1 px-4 rounded-full font-bold"
+                : "bg-yellow-500 py-1 px-4 rounded-full font-bold"
+            } `}
           >
-            ADD
+            <span className="flex">
+              {isAdding ? "ADDED" : "ADD"}
+              {selected ? <MdDoneAll /> : ""}
+            </span>
           </button>
         </div>
       </div>

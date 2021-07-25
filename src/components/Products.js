@@ -5,12 +5,10 @@ const Products = () => {
 
   const [foods, setFoods] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("pizza");
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     getFoods();
-  }, [query]);
+  }, []);
 
   const getFoods = async () => {
     const response = await fetch("/api/products");
@@ -19,7 +17,7 @@ const Products = () => {
       setLoading(false);
     }
     setFoods(data);
-    console.log(data);
+    // console.log(data);
     // console.log(data.hits[0].recipe.label);
   };
 
@@ -27,38 +25,28 @@ const Products = () => {
     setSearch(e.target.value);
   };
 
-  const getSearch = (e) => {
-    e.preventDefault();
-    setQuery(search);
-    setSearch("");
-    // console.log(query);
-  };
   return (
     <div className="container mx-auto pb-24  ">
       <h1 className="text-lg font-bold my-8 ">Our Foods </h1>
 
-      <form onSubmit={getSearch} className="search-bar">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        className="search-bar"
+      >
         <div className="flex items-center ">
           <input
-            className=" justify-between shadow appearance-none 
+            className=" justify-center shadow appearance-none 
           focus:bg-white focus:border-yellow-500
           max-w-md 
           border rounded w-full py-2 px-3 text-gray-700 
 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
-            placeholder="Search Foods"
+            placeholder="Search Food"
             value={search}
             onChange={updateSearch}
           />
-
-          <button
-            type="submit"
-            className=" ml-2 bg-yellow-500 hover:bg-yellow-700 text-white
-           font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-            type="button"
-          >
-            Search
-          </button>
         </div>
       </form>
 
@@ -70,7 +58,18 @@ leading-tight focus:outline-none focus:shadow-outline"
             alt="loading..."
           />
         ) : (
-          foods.map((product, index) => <Food key={product._id} {...product} />)
+          foods
+            .filter((value) => {
+              if (search === "") {
+                return value;
+              } else if (
+                value.name.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return value;
+              }
+            })
+            .map((product) => <Food key={product._id} {...product} />)
+          // foods.map((product, index) => <Food key={product._id} {...product} />)
         )}
       </div>
     </div>

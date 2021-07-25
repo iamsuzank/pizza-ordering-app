@@ -32,7 +32,7 @@ const Cart = () => {
         setProducts(products);
         togglePriceFetched(true);
       });
-  }, [cart]);
+  }, [cart, priceFetched]);
 
   const getQuantity = (productId) => {
     return cart.items[productId];
@@ -114,6 +114,7 @@ const Cart = () => {
                     +
                   </button>
                 </div>
+
                 <span>रु {getSum(product._id, product.price)}</span>
                 <button
                   onClick={() => {

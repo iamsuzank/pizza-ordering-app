@@ -6,6 +6,10 @@ const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
+  setTimeout(function nextSlide() {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  }, 7000);
+
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
@@ -29,7 +33,7 @@ const ImageSlider = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <img src={slide.image} alt="travel image" className="image" />
+              <img src={slide.image} alt="travel " className="image" />
             )}
           </div>
         );

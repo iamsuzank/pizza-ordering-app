@@ -4,10 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 450px;
+  max-width: 500px; /* or whatever width you want. */
 }
 
 .image {
-  width: 500px;
+  width: 400px;
   height: 350px;
   border-radius: 10px;
 }
@@ -17,7 +19,7 @@
   top: 50%;
   right: 1px;
   font-size: 5rem;
-  color: #ffd700;
+  color: crimson;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -28,7 +30,7 @@
   top: 50%;
   left: 1px;
   font-size: 5rem;
-  color: #ffd700;
+  color: crimson;
   z-index: 10;
   cursor: pointer;
   user-select: none;

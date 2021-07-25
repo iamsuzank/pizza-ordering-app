@@ -1,20 +1,28 @@
 {
   "files": {
-    "main.css": "/pizza-ordering-app/static/css/main.16732bbc.chunk.css",
-    "main.js": "/pizza-ordering-app/static/js/main.90111079.chunk.js",
-    "main.js.map": "/pizza-ordering-app/static/js/main.90111079.chunk.js.map",
+    "main.css": "/pizza-ordering-app/static/css/main.c8ed10ed.chunk.css",
+    "main.js": "/pizza-ordering-app/static/js/main.0e643b02.chunk.js",
+    "main.js.map": "/pizza-ordering-app/static/js/main.0e643b02.chunk.js.map",
     "runtime-main.js": "/pizza-ordering-app/static/js/runtime-main.858dbe17.js",
     "runtime-main.js.map": "/pizza-ordering-app/static/js/runtime-main.858dbe17.js.map",
     "static/js/2.5f9c0831.chunk.js": "/pizza-ordering-app/static/js/2.5f9c0831.chunk.js",
     "static/js/2.5f9c0831.chunk.js.map": "/pizza-ordering-app/static/js/2.5f9c0831.chunk.js.map",
     "index.html": "/pizza-ordering-app/index.html",
-    "static/css/main.16732bbc.chunk.css.map": "/pizza-ordering-app/static/css/main.16732bbc.chunk.css.map",
-    "static/js/2.5f9c0831.chunk.js.LICENSE.txt": "/pizza-ordering-app/static/js/2.5f9c0831.chunk.js.LICENSE.txt"
+    "static/css/main.c8ed10ed.chunk.css.map": "/pizza-ordering-app/static/css/main.c8ed10ed.chunk.css.map",
+    "static/js/2.5f9c0831.chunk.js.LICENSE.txt": "/pizza-ordering-app/static/js/2.5f9c0831.chunk.js.LICENSE.txt",
+    "static/media/img1.0e31453a.svg": "/pizza-ordering-app/static/media/img1.0e31453a.svg",
+    "static/media/img2.a6cc6106.svg": "/pizza-ordering-app/static/media/img2.a6cc6106.svg",
+    "static/media/img3.9b9f97d7.svg": "/pizza-ordering-app/static/media/img3.9b9f97d7.svg",
+    "static/media/img4.b6986ad1.svg": "/pizza-ordering-app/static/media/img4.b6986ad1.svg",
+    "static/media/img5.71b5a4cd.svg": "/pizza-ordering-app/static/media/img5.71b5a4cd.svg",
+    "static/media/img6.0f14d611.svg": "/pizza-ordering-app/static/media/img6.0f14d611.svg",
+    "static/media/img7.276d66d6.svg": "/pizza-ordering-app/static/media/img7.276d66d6.svg",
+    "static/media/loading.0cf2fcfc.gif": "/pizza-ordering-app/static/media/loading.0cf2fcfc.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.858dbe17.js",
     "static/js/2.5f9c0831.chunk.js",
-    "static/css/main.16732bbc.chunk.css",
-    "static/js/main.90111079.chunk.js"
+    "static/css/main.c8ed10ed.chunk.css",
+    "static/js/main.0e643b02.chunk.js"
   ]
 }

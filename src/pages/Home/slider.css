@@ -4,12 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
-  max-width: 500px; /* or whatever width you want. */
+  width: 600px;
+  max-width: 600px; /* or whatever width you want. */
+
+  height: 350px;
 }
 
 .image {
-  width: 400px;
+  width: 500px;
   height: 350px;
   border-radius: 10px;
 }

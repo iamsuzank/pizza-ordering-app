@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Food from "./Food";
+import Loading from "../images/loading.gif";
+
 const Products = () => {
   // const { name } = useContext(CartContext);
 
@@ -53,7 +55,7 @@ leading-tight focus:outline-none focus:shadow-outline"
       <div className="grid grid-cols-5 my-8 gap-24">
         {loading ? (
           <img
-            src="/images/loading.gif"
+            src={Loading}
             className=" mx-auto w-1/2 mt-12 min-w-max min-w-max "
             alt="loading..."
           />
@@ -67,6 +69,7 @@ leading-tight focus:outline-none focus:shadow-outline"
               ) {
                 return value;
               }
+              return false;
             })
             .map((product) => <Food key={product._id} {...product} />)
           // foods.map((product, index) => <Food key={product._id} {...product} />)

@@ -1,23 +1,30 @@
+import Img1 from "../../images/img1.svg";
+import Img2 from "../../images/img2.svg";
+import Img3 from "../../images/img3.svg";
+import Img4 from "../../images/img4.svg";
+import Img5 from "../../images/img5.svg";
+import Img6 from "../../images/img6.svg";
+import Img7 from "../../images/img7.svg";
 export const SliderData = [
   {
-    image: "/images/img1.svg",
+    image: Img1,
   },
   {
-    image: "/images/img2.svg",
+    image: Img2,
   },
   {
-    image: "/images/img3.svg",
+    image: Img3,
   },
   {
-    image: "/images/img4.svg",
+    image: Img4,
   },
   {
-    image: "/images/img5.svg",
+    image: Img5,
   },
   {
-    image: "/images/img6.svg",
+    image: Img6,
   },
   {
-    image: "/images/img7.svg",
+    image: Img7,
   },
 ];
